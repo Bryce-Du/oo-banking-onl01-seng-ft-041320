@@ -15,7 +15,7 @@ class Transfer
   def execute_transaction
     message = ""
     if @status == "pending"
-      if self.valid?
+      if !self.valid?
         @status = "rejected"
         message = "Transaction rejected. Please check your account balance."
       else
