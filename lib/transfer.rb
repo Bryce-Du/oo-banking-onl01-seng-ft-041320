@@ -20,6 +20,7 @@ class Transfer
         @sender.deposit(-amount)
         @receiver.deposit(amount)
         @status = "complete"
+      end
     end
   end
 end
