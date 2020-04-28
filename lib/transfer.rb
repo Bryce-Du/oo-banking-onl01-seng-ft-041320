@@ -15,6 +15,7 @@ class Transfer
   def execute_transaction
     if @status == "pending"
       if !@sender.valid?
+        puts "SIDFJAWOIDJKAOWDKA"
         "Transaction rejected. Please check your account balance."
       else
         @sender.deposit(-amount)
