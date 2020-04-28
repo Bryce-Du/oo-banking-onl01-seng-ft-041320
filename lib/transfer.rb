@@ -15,7 +15,6 @@ class Transfer
   def execute_transaction
     message = ""
     if @status == "pending"
-      puts "#{@sender}"
       puts "#{@sender.valid?}"
       if !@sender.valid?
         @status = "rejected"
