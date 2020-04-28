@@ -16,7 +16,7 @@ class Transfer
     message = ""
     if @status == "pending"
       puts "#{@sender.valid?}"
-      if !@sender.valid?
+      if @sender.status == "closed"
         @status = "rejected"
         message = "Transaction rejected. Please check your account balance."
       else
