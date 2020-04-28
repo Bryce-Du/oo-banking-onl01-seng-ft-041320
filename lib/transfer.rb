@@ -16,7 +16,7 @@ class Transfer
     message = ""
     if @status == "pending"
       puts self.valid?
-      if !self.valid?
+      if !self.valid? || @sender.balance < amount
         @status = "rejected"
         message = "Transaction rejected. Please check your account balance."
       else
